@@ -1,16 +1,14 @@
-use rand::Rng;  // standardbibliothek für zufallsgeneratoren
+use rand::Rng;  // library for random numbers
 
 fn main() {
-        
-    let mut rng = rand::thread_rng(); // Zufallsgenerator erzeugen
+
+    let num: i32 = rand::thread_rng().gen_range(0..3); // random number between 0 and 3
     
-    let zahl: i32 = rng.gen_range(0..3);
-    
-    match zahl{
+    match num{                          // match the random number to a function
         0 => println!("{}", first()),
         1 => println!("{}", second()),
         2 => println!("{}", third()), 
-        _ => println!("I don't know what to do."),
+        _ => println!("I don't know what to do here. But you wont see this i hope. :3"),
     }
 }
 
